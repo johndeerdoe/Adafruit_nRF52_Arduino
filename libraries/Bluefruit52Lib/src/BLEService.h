@@ -59,6 +59,10 @@ class BLEService
 
     void setUuid(BLEUuid bleuuid);
 
+    void setPermission(SecureMode_t read_perm, SecureMode_t write_perm);
+    void getPermission(SecureMode_t* read_perm, SecureMode_t* write_perm);
+
+
     virtual err_t begin(void);
 
     friend class BLEGatt;
